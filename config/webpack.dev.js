@@ -2,8 +2,6 @@ const path = require('path');
 
 // Webkpack plugins
 const RunNodeWebpackPlugin = require('run-node-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: path.join(__dirname, '../src/index.ts'),
@@ -23,5 +21,5 @@ module.exports = {
             },
         ],
     },
-    plugins: [new RunNodeWebpackPlugin({ scriptToRun: 'main.js' })],
+    plugins: [new RunNodeWebpackPlugin()],
 };
