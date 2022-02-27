@@ -27,7 +27,7 @@ const option =
         : {};
 
 const io = new Server(serve, option);
-
+console.log(option);
 init(io);
 
 serve.listen(port);

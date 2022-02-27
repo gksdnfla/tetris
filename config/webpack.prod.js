@@ -1,11 +1,7 @@
 const path = require('path');
 
-// Webkpack plugins
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
 module.exports = {
-    entry: path.join(__dirname, '../src/main.ts'),
+    entry: path.join(__dirname, '../src/index.ts'),
     output: {
         path: path.join(__dirname, '../dist'),
         filename: '[name].js',
