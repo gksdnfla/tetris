@@ -23,17 +23,8 @@
     },
     "homepage": "https://github.com/gksdnfla/tetris#readme",
     "devDependencies": {
-        "autoprefixer": "^10.4.2",
-        "clean-webpack-plugin": "^4.0.0",
-        "copy-webpack-plugin": "^10.2.4",
         "cross-env": "^7.0.3",
-        "css-loader": "^6.6.0",
-        "html-webpack-plugin": "^5.5.0",
         "husky": "^7.0.0",
-        "less": "^4.1.2",
-        "less-loader": "^10.2.0",
-        "mini-css-extract-plugin": "^2.5.3",
-        "postcss-loader": "^6.2.1",
         "prettier": "^2.5.1",
         "pretty-quick": "^3.1.3",
         "run-node-webpack-plugin": "^1.3.0",
@@ -43,13 +34,6 @@
         "webpack-cli": "^4.9.2"
     },
     "dependencies": {
-        "socket.io": "^4.4.1",
-        "socket.io-client": "^4.4.1"
-    },
-    "optionalDependencies": {
-        "bufferutil": "^4.0.6",
-        "crypto-browserify": "^3.12.0",
-        "path-brwoserify": "*",
-        "utf-8-validate": "^5.0.8"
+        "socket.io": "^4.4.1"
     }
 }
