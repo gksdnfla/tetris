@@ -7,11 +7,8 @@ module.exports = {
     entry: path.join(__dirname, '../src/index.ts'),
     output: {
         path: path.join(__dirname, '../dist'),
-        filename: '[name].[hash].js',
+        filename: '[name].js',
         clean: true,
-    },
-    resolve: {
-        extensions: ['.js', '.json', '.ts'],
     },
     module: {
         rules: [

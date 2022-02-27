@@ -13,6 +13,9 @@ if (ENV === 'development') {
 module.exports = {
     mode: ENV,
     target: 'node',
+    resolve: {
+        extensions: ['.js', '.ts'],
+    },
     node: {
         global: false,
         __filename: false,

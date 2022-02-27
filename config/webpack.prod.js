@@ -7,9 +7,6 @@ module.exports = {
         filename: '[name].js',
         clean: true,
     },
-    resolve: {
-        extensions: ['.js', '.json', '.ts'],
-    },
     module: {
         rules: [
             {
