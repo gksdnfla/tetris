@@ -1,7 +1,22 @@
-import { Server } from 'socket.io';
+import { Server, Socket } from 'socket.io';
 
-export function connection(io: Server): void {
-    io.on('connection', () => {
-        console.log('connected');
+import { disconnect } from './disconnect';
+import { startGame } from './startGame';
+
+// Interface
+import { UserDataInterface } from './interface';
+
+const arr: Array<(socket: Socket, userData: UserDataInterface) => void> = [
+    disconnect,
+    startGame,
+];
+
+export function connection(io: Server, userData: UserDataInterface): void {
+    io.on('connection', (socket: Socket) => {
+        arr.forEach(
+            (fn: (socket: Socket, userData: UserDataInterface) => void) => {
+                fn(socket, userData);
+            }
+        );
     });
 }

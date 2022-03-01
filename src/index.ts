@@ -9,7 +9,10 @@ import fs from 'fs';
 import path from 'path';
 
 import { EventEmitter } from '../utils/eventEmitter';
-import { init } from './init';
+import { connection } from './connection';
+
+// Interfaces
+import { UserDataInterface } from './interface';
 
 const serve =
     process.env.NODE_ENV === 'development'
@@ -27,8 +30,9 @@ const option =
         : {};
 
 const io = new Server(serve, option);
-console.log(option);
-init(io);
+const userData: UserDataInterface = {};
+
+connection(io, userData);
 
 serve.listen(port);
 
